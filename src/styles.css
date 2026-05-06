@@ -694,21 +694,19 @@ select:focus {
   }
 
   .hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) 128px;
+    align-items: start;
     gap: 14px;
     padding-top: 12px;
   }
 
   .hero-content {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 128px;
-    column-gap: 14px;
-    align-items: start;
+    display: contents;
   }
 
-  .hero-content .eyebrow,
-  .hero-content .kicker,
-  .hero-content h1 {
+  .hero .eyebrow,
+  .hero .kicker,
+  .hero h1 {
     grid-column: 1;
   }
 
