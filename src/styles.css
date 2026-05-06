@@ -60,7 +60,7 @@ a {
 
 .hero-brand {
   position: absolute;
-  top: 36px;
+  top: clamp(220px, 28vh, 320px);
   left: 0;
   z-index: 2;
   display: block;
@@ -661,12 +661,21 @@ select:focus {
   }
 
   .hero-brand {
-    top: 28px;
-    width: 132px;
-    height: 46px;
+    top: 34px;
+    left: 0;
+    width: 84px;
+    height: 32px;
   }
 
-  .hero .eyebrow,
+  .hero .eyebrow {
+    grid-column: 1;
+    min-height: 32px;
+    padding-left: 94px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+
   .hero .kicker,
   .hero h1 {
     grid-column: 1;
