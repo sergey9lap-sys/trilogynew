@@ -60,7 +60,7 @@ a {
 
 .hero-brand {
   position: absolute;
-  top: 12px;
+  top: 36px;
   left: 0;
   z-index: 2;
   display: block;
@@ -661,7 +661,7 @@ select:focus {
   }
 
   .hero-brand {
-    top: 2px;
+    top: 28px;
     width: 132px;
     height: 46px;
   }
