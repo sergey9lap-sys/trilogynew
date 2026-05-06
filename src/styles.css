@@ -694,17 +694,37 @@ select:focus {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1fr) 128px;
-    align-items: start;
+    grid-template-columns: 1fr;
     gap: 14px;
     padding-top: 12px;
   }
 
+  .hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 128px;
+    column-gap: 14px;
+    align-items: start;
+  }
+
+  .hero-content .eyebrow,
+  .hero-content .kicker,
+  .hero-content h1 {
+    grid-column: 1;
+  }
+
   .hero-media {
+    grid-row: 1 / span 3;
+    grid-column: 2;
     width: 128px;
     aspect-ratio: 0.92;
     margin: 0;
     border-width: 5px;
+  }
+
+  .subtitle,
+  .lead,
+  .hero-actions {
+    grid-column: 1 / -1;
   }
 
   h1 {
@@ -721,7 +741,7 @@ select:focus {
   }
 
   .lead {
-    max-width: 235px;
+    max-width: none;
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.28;
@@ -746,7 +766,7 @@ select:focus {
   }
 
   .hero-actions .button {
-    width: auto;
+    width: 100%;
   }
 
   .hero-content {
