@@ -259,7 +259,7 @@ h3 {
 }
 
 .persona,
-.step {
+.practice-day {
   min-height: 100%;
   padding: 26px;
   border: 1px solid var(--line);
@@ -295,17 +295,19 @@ blockquote {
   padding-bottom: 80px;
 }
 
-.steps {
+.practice-days {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-.step {
+.practice-day {
+  display: grid;
+  gap: 18px;
   background: var(--surface);
 }
 
-.step span {
+.practice-day span {
   display: inline-flex;
   width: 44px;
   height: 44px;
@@ -318,7 +320,60 @@ blockquote {
   font-weight: 900;
 }
 
-.step p,
+.practice-day h3 {
+  margin-bottom: 0;
+  color: var(--green-dark);
+  font-size: clamp(24px, 2vw, 30px);
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.practice-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.practice-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  min-width: 0;
+}
+
+.practice-list li::marker {
+  color: var(--gold-strong);
+}
+
+.practice-result {
+  margin-top: auto;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 246, 191, 0.45);
+}
+
+.practice-result strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--green-dark);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.practice-result p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .author-copy p,
 .registration-copy p {
   color: var(--muted);
@@ -344,20 +399,19 @@ blockquote {
   box-shadow: var(--shadow);
 }
 
-.author-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.author-regalia {
+  display: grid;
+  gap: 12px;
   margin-top: 28px;
 }
 
-.author-facts span {
-  padding: 10px 14px;
+.regalia-item {
+  padding: 16px 18px;
   color: var(--green-dark);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--surface);
-  font-weight: 700;
+  background: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
 }
 
 .registration {
@@ -381,11 +435,12 @@ blockquote {
   opacity: 0.78;
 }
 
-.registration-form {
-  padding: 28px;
-  border-radius: 8px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
+.registration-widget {
+  min-height: 360px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 label {
@@ -556,8 +611,12 @@ select:focus {
   }
 
   .persona-grid,
-  .steps {
+  .practice-days {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .practice-columns {
+    grid-template-columns: 1fr;
   }
 
   .author-photo {
@@ -623,7 +682,7 @@ select:focus {
   }
 
   .persona-grid,
-  .steps {
+  .practice-days {
     grid-template-columns: 1fr;
   }
 
