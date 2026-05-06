@@ -517,24 +517,6 @@ select:focus {
   color: var(--surface-warm);
 }
 
-.developer-link {
-  display: inline-grid;
-  gap: 4px;
-  margin-top: 14px;
-  padding: 14px 16px;
-  color: var(--green-dark) !important;
-  border-radius: 8px;
-  background: var(--surface-warm);
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.developer-link span {
-  font-size: 13px;
-  font-weight: 800;
-  text-transform: none;
-}
-
 .footer-bottom {
   display: flex;
   grid-column: 1 / -1;
