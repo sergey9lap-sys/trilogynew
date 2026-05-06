@@ -38,57 +38,6 @@ a {
   text-decoration: none;
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: grid;
-  grid-template-columns: 210px 1fr auto;
-  align-items: center;
-  gap: 24px;
-  padding: 12px clamp(18px, 4vw, 56px);
-  background: rgba(255, 250, 240, 0.9);
-  border-bottom: 1px solid rgba(223, 210, 175, 0.7);
-  backdrop-filter: blur(16px);
-}
-
-.brand {
-  display: block;
-  width: 190px;
-  height: 52px;
-  overflow: hidden;
-}
-
-.brand img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: left center;
-}
-
-.header-nav {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.header-nav a,
-.header-action {
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.header-nav a:hover,
-.header-action:hover {
-  color: var(--green-dark);
-}
-
-.header-action {
-  color: var(--green-dark);
-  font-weight: 700;
-}
-
 .section {
   width: min(1160px, calc(100% - 36px));
   margin: 0 auto;
@@ -96,15 +45,34 @@ a {
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.58fr);
   align-items: center;
   gap: clamp(28px, 5vw, 60px);
-  min-height: calc(100vh - 78px);
+  min-height: 100vh;
 }
 
 .hero-content {
   max-width: 900px;
+  padding-top: 78px;
+}
+
+.hero-brand {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 176px;
+  height: 60px;
+}
+
+.hero-brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .eyebrow,
@@ -646,18 +614,6 @@ select:focus {
 }
 
 @media (max-width: 960px) {
-  .site-header {
-    grid-template-columns: 170px 1fr;
-  }
-
-  .header-nav {
-    display: none;
-  }
-
-  .brand {
-    width: 166px;
-  }
-
   .hero,
   .author,
   .registration {
@@ -667,6 +623,10 @@ select:focus {
   .hero {
     min-height: 0;
     padding-top: 42px;
+  }
+
+  .hero-content {
+    padding-top: 66px;
   }
 
   .persona-grid,
@@ -684,20 +644,6 @@ select:focus {
 }
 
 @media (max-width: 640px) {
-  .site-header {
-    grid-template-columns: 1fr auto;
-    padding: 10px 16px;
-  }
-
-  .brand {
-    width: 138px;
-    height: 42px;
-  }
-
-  .header-action {
-    font-size: 14px;
-  }
-
   .section {
     width: min(100% - 28px, 1160px);
     padding: 42px 0;
@@ -712,6 +658,12 @@ select:focus {
 
   .hero-content {
     display: contents;
+  }
+
+  .hero-brand {
+    top: 2px;
+    width: 132px;
+    height: 46px;
   }
 
   .hero .eyebrow,
