@@ -45,6 +45,7 @@ a {
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-areas:
     "brand media"
@@ -58,7 +59,7 @@ a {
 
 .hero-content {
   grid-area: content;
-  max-width: 760px;
+  max-width: 700px;
   padding-top: 0;
 }
 
@@ -89,6 +90,7 @@ a {
 
 .kicker {
   color: var(--green);
+  margin-bottom: 8px;
 }
 
 h1,
@@ -100,7 +102,7 @@ p {
 
 h1 {
   max-width: 720px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-size: clamp(40px, 5vw, 76px);
   line-height: 0.96;
   letter-spacing: 0;
@@ -121,18 +123,30 @@ h3 {
 }
 
 .subtitle {
-  max-width: 680px;
-  margin-bottom: 22px;
+  max-width: 620px;
+  margin-bottom: 18px;
   color: var(--green);
-  font-size: clamp(20px, 2vw, 30px);
+  font-size: clamp(18px, 1.7vw, 24px);
   font-weight: 700;
-  line-height: 1.14;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.hero-dates {
+  position: absolute;
+  top: 118px;
+  left: clamp(320px, 37vw, 470px);
+  margin: 0;
+  color: var(--gold-strong);
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .hero-intro {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--ink);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
 }
 
@@ -147,14 +161,14 @@ h3 {
 
 .hero-list {
   max-width: 690px;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
 .hero-list li,
 .hero-bonus-list li {
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.48;
+  font-size: 16px;
+  line-height: 1.42;
 }
 
 .hero-list li::before {
@@ -175,9 +189,13 @@ h3 {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 28px;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.hero-actions .button {
+  align-self: flex-start;
 }
 
 .button {
@@ -230,26 +248,30 @@ h3 {
 }
 
 .hero-timer {
-  display: grid;
-  gap: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: 0;
 }
 
 .hero-timer-label {
   color: var(--muted);
   font-size: 15px;
   font-weight: 700;
+  padding-left: 2px;
 }
 
 .hero-timer-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .hero-timer-item {
   display: grid;
-  min-width: 88px;
-  padding: 10px 12px;
+  min-width: 76px;
+  padding: 8px 10px;
   border: 1px solid rgba(67, 107, 87, 0.18);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.52);
@@ -259,7 +281,7 @@ h3 {
 
 .hero-timer-item strong {
   color: var(--green-dark);
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1;
 }
 
@@ -272,11 +294,11 @@ h3 {
 }
 
 .hero-bonuses {
-  max-width: 720px;
-  padding: 20px 22px;
+  max-width: 690px;
+  padding: 16px 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 252, 229, 0.52);
 }
 
 .hero-bonuses-title {
@@ -302,6 +324,15 @@ h3 {
   font-size: 15px;
   font-weight: 700;
   line-height: 1.45;
+}
+
+.hero-today::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin: 0 0 10px;
+  background: rgba(67, 107, 87, 0.32);
 }
 
 .hero-media {
@@ -419,7 +450,9 @@ blockquote {
 
 .practice-day {
   display: grid;
-  gap: 18px;
+  grid-template-rows: auto auto auto 1fr;
+  align-content: start;
+  gap: 16px;
   background: var(--surface);
 }
 
@@ -443,13 +476,16 @@ blockquote {
   line-height: 1.05;
   overflow-wrap: anywhere;
   text-transform: uppercase;
+  display: inline-flex;
+  width: fit-content;
+  padding: 2px 0;
 }
 
 .practice-headline {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px;
+  display: grid;
+  gap: 6px;
+  min-height: 92px;
+  align-content: start;
 }
 
 .practice-day-label,
@@ -457,9 +493,14 @@ blockquote {
 .practice-time {
   margin: 0;
   color: var(--green-dark);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.practice-time {
+  color: var(--ink);
+  min-height: 20px;
 }
 
 .practice-list {
@@ -471,6 +512,11 @@ blockquote {
   font-size: 15px;
   line-height: 1.5;
   min-width: 0;
+}
+
+.practice-list strong {
+  color: var(--green-dark);
+  font-weight: 800;
 }
 
 .practice-list li::marker {
@@ -515,17 +561,19 @@ blockquote {
 
 .author-regalia {
   display: grid;
-  gap: 12px;
-  margin-top: 28px;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .regalia-item {
-  padding: 16px 18px;
-  color: var(--green-dark);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.6);
-  font-weight: 600;
+  padding: 0;
+  color: var(--muted);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.45;
 }
 
 .registration {
@@ -564,6 +612,7 @@ blockquote {
   border-radius: 18px;
   background: rgba(255, 246, 191, 0.12);
   box-shadow: 0 22px 54px rgba(20, 40, 31, 0.22);
+  overflow: hidden;
 }
 
 .registration-widget iframe,
@@ -697,6 +746,10 @@ select:focus {
   color: rgba(255, 255, 255, 0.78);
 }
 
+.footer-contacts p {
+  line-height: 1.45;
+}
+
 .footer-column a {
   width: fit-content;
   transition: color 0.2s ease;
@@ -740,6 +793,12 @@ select:focus {
     padding-top: 0;
   }
 
+  .hero-dates {
+    position: static;
+    order: -1;
+    margin-bottom: 10px;
+  }
+
   .persona-grid,
   .practice-days {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -761,11 +820,11 @@ select:focus {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1fr) 148px;
+    grid-template-columns: minmax(0, 1fr) 132px;
     grid-template-areas: none;
     align-items: start;
-    gap: 14px;
-    padding-top: 12px;
+    gap: 16px;
+    padding-top: 54px;
   }
 
   .hero-content {
@@ -773,10 +832,11 @@ select:focus {
   }
 
   .hero-brand {
-    top: 34px;
+    top: 0;
     left: 0;
-    width: 84px;
-    height: 32px;
+    width: 92px;
+    height: 34px;
+    margin-bottom: 0;
   }
 
   .hero .eyebrow {
@@ -793,13 +853,24 @@ select:focus {
     grid-column: 1;
   }
 
+  .hero-dates {
+    grid-column: 1 / -1;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  .hero .kicker {
+    margin-bottom: 10px;
+    padding-top: 4px;
+  }
+
   .hero-media {
     grid-row: 1 / span 3;
     grid-column: 2;
-    width: 148px;
+    width: 132px;
     aspect-ratio: 0.96;
     margin: 0;
-    border-width: 5px;
+    border-width: 4px;
   }
 
   .subtitle,
@@ -818,7 +889,7 @@ select:focus {
 
   .subtitle {
     margin-bottom: 6px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .hero-intro {
@@ -837,7 +908,7 @@ select:focus {
   .hero-bonus-list li,
   .hero-bonuses-title,
   .hero-today {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.4;
   }
 
@@ -866,16 +937,16 @@ select:focus {
   }
 
   .hero-timer-grid {
-    gap: 8px;
+    gap: 6px;
   }
 
   .hero-timer-item {
-    min-width: calc((100% - 16px) / 3);
-    padding: 10px 8px;
+    min-width: calc((100% - 12px) / 3);
+    padding: 8px 6px;
   }
 
   .hero-timer-item strong {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .hero-bonuses {
@@ -907,14 +978,13 @@ select:focus {
   .registration-widget {
     width: 100%;
     overflow: hidden;
-    transform: scale(0.9);
-    transform-origin: top center;
-    margin-bottom: -70px;
+    transform: none;
+    margin-bottom: 0;
   }
 
   .registration-widget-shell {
     min-height: 0;
-    padding: 14px;
+    padding: 10px;
   }
 
   .hero-actions {
@@ -934,6 +1004,14 @@ select:focus {
   .registration {
     padding-right: 14px;
     padding-left: 14px;
+  }
+
+  .registration-widget iframe,
+  .registration-widget script + div,
+  .registration-widget-shell iframe,
+  .registration-widget-shell > div {
+    min-height: 760px;
+    border-radius: 14px;
   }
 
   .persona-grid,
