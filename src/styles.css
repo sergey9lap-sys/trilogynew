@@ -994,11 +994,11 @@ select:focus {
   .registration-widget iframe,
   .registration-widget-shell iframe,
   .registration-widget-shell > div {
-    width: 108.7% !important;
-    max-width: 108.7% !important;
+    width: 111.8% !important;
+    max-width: 111.8% !important;
     margin-right: auto !important;
     margin-left: auto !important;
-    transform: translateX(-36px) scale(0.92);
+    transform: translateX(-44px) scale(0.95);
     transform-origin: top left;
   }
 
