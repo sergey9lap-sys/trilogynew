@@ -991,13 +991,15 @@ select:focus {
   }
 
   .registration-widget script + div,
+  .registration-widget iframe,
+  .registration-widget-shell iframe,
   .registration-widget-shell > div {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 108.7% !important;
+    max-width: 108.7% !important;
     margin-right: auto !important;
     margin-left: auto !important;
-    transform: none;
-    transform-origin: top center;
+    transform: translateX(-36px) scale(0.92);
+    transform-origin: top left;
   }
 
   .registration-widget-shell form,
