@@ -833,10 +833,10 @@ select:focus {
 
   .hero-brand {
     position: absolute;
-    top: 16px;
-    left: 0;
-    width: 86px;
-    height: 32px;
+    top: 116px;
+    left: 138px;
+    width: 74px;
+    height: 28px;
     margin-bottom: 0;
   }
 
@@ -987,6 +987,13 @@ select:focus {
     min-height: 0;
     padding: 8px;
     border-radius: 16px;
+  }
+
+  .registration-widget script + div,
+  .registration-widget-shell > div {
+    width: 111.2% !important;
+    transform: scale(0.9);
+    transform-origin: top left;
   }
 
   .hero-actions {
