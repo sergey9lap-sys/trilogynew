@@ -820,11 +820,11 @@ select:focus {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1fr) 132px;
+    grid-template-columns: minmax(0, 1fr) 136px;
     grid-template-areas: none;
     align-items: start;
-    gap: 16px;
-    padding-top: 54px;
+    gap: 10px 16px;
+    padding-top: 86px;
   }
 
   .hero-content {
@@ -832,55 +832,50 @@ select:focus {
   }
 
   .hero-brand {
-    top: 0;
+    position: absolute;
+    top: 16px;
     left: 0;
-    width: 92px;
-    height: 34px;
+    width: 86px;
+    height: 32px;
     margin-bottom: 0;
   }
 
-  .hero .eyebrow {
-    grid-column: 1;
-    min-height: 32px;
-    padding-left: 94px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-  }
-
   .hero .kicker,
-  .hero h1 {
+  .hero .hero-dates {
     grid-column: 1;
   }
 
   .hero-dates {
-    grid-column: 1 / -1;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     font-size: 13px;
   }
 
   .hero .kicker {
-    margin-bottom: 10px;
-    padding-top: 4px;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 
   .hero-media {
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 2;
     grid-column: 2;
-    width: 132px;
+    width: 136px;
     aspect-ratio: 0.96;
     margin: 0;
     border-width: 4px;
   }
 
+  .hero h1,
   .subtitle,
-  .lead,
-  .hero-actions {
+  .hero-intro,
+  .hero-list,
+  .hero-actions,
+  .hero-bonuses {
     grid-column: 1 / -1;
   }
 
   h1 {
-    font-size: clamp(30px, 9vw, 40px);
+    margin-top: 4px;
+    font-size: clamp(32px, 10vw, 44px);
   }
 
   h2 {
@@ -899,7 +894,6 @@ select:focus {
   }
 
   .hero-list {
-    grid-column: 1 / -1;
     gap: 8px;
     margin-bottom: 16px;
   }
@@ -967,12 +961,19 @@ select:focus {
 
   .registration {
     gap: 18px;
-    padding-top: 36px;
-    padding-bottom: 30px;
+    padding-top: 28px;
+    padding-bottom: 24px;
+    overflow-x: clip;
   }
 
   .registration-copy p {
     font-size: 15px;
+  }
+
+  .registration h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 1.02;
   }
 
   .registration-widget {
@@ -984,16 +985,22 @@ select:focus {
 
   .registration-widget-shell {
     min-height: 0;
-    padding: 10px;
+    padding: 8px;
+    border-radius: 16px;
   }
 
   .hero-actions {
-    align-items: flex-start;
-    gap: 6px;
+    align-items: stretch;
+    gap: 10px;
   }
 
   .hero-actions .button {
     width: 100%;
+  }
+
+  .hero-timer {
+    width: 100%;
+    margin-top: 0;
   }
 
   .hero-content {
@@ -1010,8 +1017,8 @@ select:focus {
   .registration-widget script + div,
   .registration-widget-shell iframe,
   .registration-widget-shell > div {
-    min-height: 760px;
-    border-radius: 14px;
+    min-height: 740px;
+    border-radius: 12px;
   }
 
   .persona-grid,
