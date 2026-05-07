@@ -865,12 +865,17 @@ select:focus {
 
   .hero-brand {
     position: absolute;
-    top: -92px;
-    left: calc(100% - 286px);
-    width: 92px;
-    height: 60px;
+    top: 76px;
+    right: 152px;
+    z-index: 2;
+    width: 86px;
+    height: 54px;
     margin-bottom: 0;
     overflow: hidden;
+  }
+
+  .hero-brand img {
+    object-position: center;
   }
 
   .hero .kicker,
@@ -1037,11 +1042,11 @@ select:focus {
   .registration-widget iframe,
   .registration-widget-shell iframe,
   .registration-widget-shell > div {
-    width: 111.8% !important;
-    max-width: 111.8% !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin-right: auto !important;
     margin-left: auto !important;
-    transform: translateX(-32px) scale(0.95);
+    transform: none;
     transform-origin: top left;
   }
 
@@ -1060,8 +1065,8 @@ select:focus {
   .registration-widget-shell [class*="Button"] {
     width: calc(100% - 56px) !important;
     max-width: calc(100% - 56px) !important;
-    margin-right: 0 !important;
-    margin-left: -40px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
 
   .hero-actions {
