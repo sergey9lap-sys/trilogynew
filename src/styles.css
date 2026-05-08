@@ -623,6 +623,17 @@ blockquote {
   opacity: 0.78;
 }
 
+.registration-bonus-media {
+  width: min(430px, 74%);
+  margin-top: clamp(36px, 7vw, 86px);
+}
+
+.registration-bonus-media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .registration-widget {
   min-height: 720px;
   padding: 0;
@@ -1019,6 +1030,11 @@ select:focus {
 
   .registration-copy p {
     font-size: 15px;
+  }
+
+  .registration-bonus-media {
+    width: min(280px, 78%);
+    margin: 24px auto 0;
   }
 
   .registration h2 {
