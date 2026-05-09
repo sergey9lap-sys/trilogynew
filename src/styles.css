@@ -103,6 +103,10 @@ a {
   text-transform: uppercase;
 }
 
+.eyebrow span {
+  display: block;
+}
+
 .kicker {
   color: var(--green);
   margin-bottom: 8px;
