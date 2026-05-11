@@ -774,7 +774,7 @@ blockquote {
   border-radius: 18px;
 }
 
-label {
+body > label {
   display: grid;
   gap: 8px;
   margin-bottom: 16px;
@@ -782,8 +782,8 @@ label {
   font-weight: 800;
 }
 
-input,
-select {
+body > input,
+body > select {
   width: 100%;
   min-height: 52px;
   padding: 0 14px;
@@ -794,8 +794,8 @@ select {
   font: inherit;
 }
 
-input:focus,
-select:focus {
+body > input:focus,
+body > select:focus {
   border-color: var(--green);
   outline: 3px solid rgba(67, 107, 87, 0.14);
 }
@@ -1177,28 +1177,6 @@ select:focus {
     margin-left: auto !important;
     transform: none;
     transform-origin: top left;
-  }
-
-  .registration-widget-shell form,
-  .registration-widget-shell .builder,
-  .registration-widget-shell .part-form {
-    max-width: 100% !important;
-  }
-
-  .registration-widget-shell button,
-  .registration-widget-shell input[type="button"],
-  .registration-widget-shell input[type="submit"],
-  .registration-widget-shell .btn,
-  .registration-widget-shell [class*="btn"],
-  .registration-widget-shell [class*="button"],
-  .registration-widget-shell [class*="Button"] {
-    box-sizing: border-box !important;
-    width: calc(100% - 104px) !important;
-    min-width: 0 !important;
-    max-width: calc(100% - 104px) !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    transform: none !important;
   }
 
   .hero-actions {
