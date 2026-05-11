@@ -608,6 +608,111 @@ blockquote {
   line-height: 1.45;
 }
 
+.reviews {
+  width: 100%;
+  padding-right: max(18px, calc((100vw - 1160px) / 2));
+  padding-left: max(18px, calc((100vw - 1160px) / 2));
+  background: var(--surface);
+}
+
+.reviews-heading {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.reviews-slider {
+  position: relative;
+}
+
+.reviews-track {
+  display: grid;
+  grid-auto-columns: minmax(220px, 24%);
+  grid-auto-flow: column;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px 2px 22px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(67, 107, 87, 0.5) rgba(67, 107, 87, 0.12);
+}
+
+.review-slide {
+  display: flex;
+  min-height: 380px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  box-shadow: 0 16px 38px rgba(47, 48, 48, 0.09);
+  scroll-snap-align: start;
+}
+
+.review-slide img {
+  width: 100%;
+  max-height: 440px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.reviews-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--green);
+  box-shadow: 0 14px 34px rgba(67, 107, 87, 0.22);
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.reviews-arrow-prev {
+  left: -24px;
+}
+
+.reviews-arrow-next {
+  right: -24px;
+}
+
+.reviews-arrow:disabled {
+  opacity: 0.38;
+  cursor: default;
+}
+
+.reviews-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.reviews-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(67, 107, 87, 0.3);
+  cursor: pointer;
+}
+
+.reviews-dot.is-active {
+  background: var(--green-dark);
+}
+
 .registration {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.7fr);

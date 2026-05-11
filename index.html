@@ -38,8 +38,9 @@
               <img src="/Без фона-2.png" alt="Академия методологии Александры Горевой-Куртышевой">
             </a>
             <p class="hero-dates">
-              <span>11 мая - 10:00</span>
+              <span>11 мая - лекция в записи</span>
               <span>12 мая - 19:00</span>
+              <span>20 мая - 19:00</span>
             </p>
           </div>
           <p class="kicker">Бесплатный трехдневный практикум</p>
@@ -54,7 +55,7 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#registration">Забрать схему запуска 2026</a>
             <div class="hero-timer" aria-label="Таймер до старта">
-              <span class="hero-timer-label">Старт через</span>
+              <span class="hero-timer-label">Эфир через</span>
               <div class="hero-timer-grid" id="hero-countdown">
                 <div class="hero-timer-item">
                   <strong data-unit="days">03</strong>
@@ -163,7 +164,7 @@
               <p class="practice-day-label">День 1</p>
               <h3>Продукт</h3>
             </div>
-            <p class="practice-time">11 мая - 10:00</p>
+            <p class="practice-time">11 мая - лекция в записи</p>
             <ul class="practice-list">
               <li><strong>Главный вопрос 2026:</strong> Почему ваша линейка продуктов не приносит денег, а просто пылится в Notion?</li>
               <li><strong>Формат ≠ Продукт:</strong> Как отличить то, что хочется создать, от того, что купят.</li>
@@ -191,7 +192,7 @@
               <p class="practice-day-label">День 3</p>
               <h3>Масштабирование</h3>
             </div>
-            <p class="practice-time">20 мая 19:00</p>
+            <p class="practice-time">20 мая - 19:00</p>
             <ul class="practice-list">
               <li><strong>Цель 2026:</strong> Вырасти в доходе и при этом не выгореть.</li>
               <li><strong>Боль:</strong> Как перестать работать 24/7 и начать уже зарабатывать.</li>
@@ -231,10 +232,60 @@
         </div>
       </section>
 
+      <section class="section reviews" id="reviews">
+        <div class="reviews-heading">
+          <p class="eyebrow">Отзывы участников</p>
+          <h2>Что говорят после работы с Александрой</h2>
+        </div>
+
+        <div class="reviews-slider" data-reviews-slider>
+          <button class="reviews-arrow reviews-arrow-prev" type="button" aria-label="Предыдущий отзыв" data-reviews-prev>
+            ‹
+          </button>
+          <div class="reviews-track" tabindex="0" aria-label="Слайдер отзывов">
+            <figure class="review-slide">
+              <img src="/reviews/review-01.jpg" alt="Отзыв участника 1" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-02.jpg" alt="Отзыв участника 2" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-03.jpg" alt="Отзыв участника 3" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-04.jpg" alt="Отзыв участника 4" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-05.jpg" alt="Отзыв участника 5" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-06.jpg" alt="Отзыв участника 6" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-07.jpg" alt="Отзыв участника 7" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-08.jpg" alt="Отзыв участника 8" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-09.jpg" alt="Отзыв участника 9" loading="lazy">
+            </figure>
+            <figure class="review-slide">
+              <img src="/reviews/review-10.jpg" alt="Отзыв участника 10" loading="lazy">
+            </figure>
+          </div>
+          <button class="reviews-arrow reviews-arrow-next" type="button" aria-label="Следующий отзыв" data-reviews-next>
+            ›
+          </button>
+        </div>
+
+        <div class="reviews-dots" aria-label="Навигация по отзывам" data-reviews-dots></div>
+      </section>
+
       <section class="section registration" id="registration">
         <div class="registration-copy">
           <p class="eyebrow">
-            <span>11 мая - 10:00</span>
+            <span>11 мая - лекция в записи</span>
             <span>12 мая - 19:00</span>
             <span>20 мая - 19:00</span>
           </p>
@@ -248,7 +299,7 @@
         </div>
         <div class="registration-widget">
           <div class="registration-widget-shell">
-            <script id="c8527d418248b93ef62f4d450c2c1390a4e95c29" src="https://agkedu.getcourse.ru/pl/lite/widget/script?id=1599016"></script>
+            <script id="04e03cd8233a7269829bdea08192636107dd6c5a" src="https://agkedu.getcourse.ru/pl/lite/widget/script?id=1602012"></script>
           </div>
         </div>
       </section>
@@ -310,7 +361,7 @@
         const hoursNode = countdown.querySelector('[data-unit="hours"]');
         const minutesNode = countdown.querySelector('[data-unit="minutes"]');
 
-        const target = new Date("2026-05-11T10:00:00+03:00").getTime();
+        const target = new Date("2026-05-12T19:00:00+03:00").getTime();
         const plural = (value, one, few, many) => {
           const mod10 = value % 10;
           const mod100 = value % 100;
@@ -345,6 +396,61 @@
 
         render();
         setInterval(render, 60000);
+      })();
+
+      (() => {
+        const slider = document.querySelector("[data-reviews-slider]");
+        if (!slider) return;
+
+        const track = slider.querySelector(".reviews-track");
+        const slides = Array.from(track.querySelectorAll(".review-slide"));
+        const prev = slider.querySelector("[data-reviews-prev]");
+        const next = slider.querySelector("[data-reviews-next]");
+        const dotsWrap = document.querySelector("[data-reviews-dots]");
+        if (!track || !slides.length || !prev || !next || !dotsWrap) return;
+
+        const dots = slides.map((_, index) => {
+          const dot = document.createElement("button");
+          dot.className = "reviews-dot";
+          dot.type = "button";
+          dot.setAttribute("aria-label", `Показать отзыв ${index + 1}`);
+          dot.addEventListener("click", () => {
+            slides[index].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+          });
+          dotsWrap.appendChild(dot);
+          return dot;
+        });
+
+        const getActiveIndex = () => {
+          const trackLeft = track.getBoundingClientRect().left;
+          return slides.reduce((closestIndex, slide, index) => {
+            const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+            const closestDistance = Math.abs(slides[closestIndex].getBoundingClientRect().left - trackLeft);
+            return distance < closestDistance ? index : closestIndex;
+          }, 0);
+        };
+
+        const update = () => {
+          const activeIndex = getActiveIndex();
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("is-active", index === activeIndex);
+          });
+
+          prev.disabled = activeIndex === 0;
+          next.disabled = activeIndex >= slides.length - 1;
+        };
+
+        const move = (direction) => {
+          const activeIndex = getActiveIndex();
+          const nextIndex = Math.min(Math.max(activeIndex + direction, 0), slides.length - 1);
+          slides[nextIndex].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+        };
+
+        prev.addEventListener("click", () => move(-1));
+        next.addEventListener("click", () => move(1));
+        track.addEventListener("scroll", () => window.requestAnimationFrame(update));
+        window.addEventListener("resize", update);
+        update();
       })();
     </script>
   </body>
