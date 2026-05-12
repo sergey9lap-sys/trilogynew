@@ -1009,6 +1009,12 @@ body > select:focus {
   .hero-dates {
     margin-bottom: 2px;
     font-size: 13px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .hero-dates span {
+    max-width: 21ch;
   }
 
   .hero .kicker {
